@@ -16,3 +16,6 @@ config :rumbl, Rumbl.Repo,
   database: "rumbl_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+# don't need to hash password more than once for tests
+config :pbkdf2_elixir, :rounds, 1
