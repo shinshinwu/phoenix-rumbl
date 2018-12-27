@@ -16,8 +16,8 @@ defmodule RumblWeb.VideoController do
   end
 
   def index(conn, _params, current_user) do
-    video = Multimedia.list_user_videos(current_user)
-    render(conn, "index.html", video: video)
+    videos = Multimedia.list_user_videos(current_user)
+    render(conn, "index.html", video: videos)
   end
 
   def new(conn, _params, current_user) do
